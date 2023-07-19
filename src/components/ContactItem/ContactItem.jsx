@@ -1,4 +1,4 @@
-import s from "./ContactItem.module.css";
+import s from './ContactItem.module.css';
 
 const ContactItem = ({ id, name, number, onDeleteContact }) => (
   <li className={s.item} key={id}>

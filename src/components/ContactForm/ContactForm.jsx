@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import s from "./ContactForm.module.css";
+import React, { useState } from 'react';
+import s from './ContactForm.module.css';
 
 const ContactForm = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
-    name: "",
-    number: "",
+    name: '',
+    number: '',
   });
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     const { name, value } = event.target;
-    setFormData((prevFormData) => ({
+    setFormData(prevFormData => ({
       ...prevFormData,
       [name]: value,
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
     onSubmit(formData);
     resetForm();
@@ -23,8 +23,8 @@ const ContactForm = ({ onSubmit }) => {
 
   const resetForm = () => {
     setFormData({
-      name: "",
-      number: "",
+      name: '',
+      number: '',
     });
   };
 
